@@ -13,6 +13,8 @@ import Box from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import UserContextProvider from './components/context/UserContext';
 import User1 from './components/context/User1';
+import Toast from './components/Toast';
+import Test from './components/polymorphic/Test';
 
 function App() {
   const person = {
@@ -63,6 +65,12 @@ function App() {
       <UserContextProvider>
         <User1></User1>
       </UserContextProvider>
+
+      <Toast position='center-bottom'></Toast>
+
+      <Test as="h1" size='sm'>Heading</Test>
+      <Test as="p" size='md'>Paragraph</Test>
+      <Test as="label" size='md' color='promary'>Label</Test>
     </div>
   );
 }
