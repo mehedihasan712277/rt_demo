@@ -10,6 +10,7 @@ import Container from './components/Container';
 import LoggedIn from './components/state/LoggedIn';
 import User from './components/state/User';
 import Box from './components/context/Box';
+import { ThemeContextProvider } from './components/context/ThemeContext';
 
 function App() {
   const person = {
@@ -53,7 +54,9 @@ function App() {
       <User></User>
 
 
-      <Box></Box>
+      <ThemeContextProvider>
+        <Box></Box>
+      </ThemeContextProvider>
     </div>
   );
 }
