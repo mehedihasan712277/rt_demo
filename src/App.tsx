@@ -5,6 +5,11 @@ import Person from './components/Person';
 import PersonList from './components/PersonList';
 import Status from './components/Status';
 import Oscer from './components/Oscer';
+import Button from './components/Button';
+import Container from './components/Container';
+import LoggedIn from './components/state/LoggedIn';
+import User from './components/state/User';
+import Box from './components/context/Box';
 
 function App() {
   const person = {
@@ -36,6 +41,19 @@ function App() {
       <Oscer>
         <Heading>This is children props</Heading>
       </Oscer>
+
+      <Button handleClick={(event, id) => {
+        console.log("hi", event, id);
+
+      }}></Button>
+
+      <Container style={{ border: "1px solid", padding: "5px" }}></Container>
+
+      <LoggedIn></LoggedIn>
+      <User></User>
+
+
+      <Box></Box>
     </div>
   );
 }
