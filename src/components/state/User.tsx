@@ -18,6 +18,7 @@ const User = () => {
     }
     return (
         <div>
+            <p>useState with future different type</p>
             <div>
                 <button onClick={handleLogIn}>Sign in</button>
                 <button onClick={handleLogOut}>Sign out</button>

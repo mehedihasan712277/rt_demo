@@ -12,6 +12,7 @@ const LoggedIn = () => {
     }
     return (
         <>
+            <p>useState</p>
             <div>
                 <button onClick={handleLogIn}>Log in</button>
                 <button onClick={handleLogOut}>Log out</button>
