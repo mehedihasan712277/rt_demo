@@ -16,6 +16,9 @@ import User1 from './components/context/User1';
 import Toast from './components/Toast';
 import Test from './components/polymorphic/Test';
 import Counter from './components/state/Counter';
+import MutableRef from './components/ref/MutableRef';
+import Private from './components/auth/Private';
+import Profile from './components/auth/Profile';
 
 function App() {
   const person = {
@@ -75,6 +78,10 @@ function App() {
 
 
       <Counter></Counter>
+
+      <MutableRef></MutableRef>
+
+      <Private isLoggedIn={true} Component={Profile}></Private>
     </div>
   );
 }
