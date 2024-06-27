@@ -19,6 +19,8 @@ import Counter from './components/state/Counter';
 import MutableRef from './components/ref/MutableRef';
 import Private from './components/auth/Private';
 import Profile from './components/auth/Profile';
+import List from './components/generics/List';
+import RandomNumber from './components/restriction/RandomNumber';
 
 function App() {
   const person = {
@@ -82,6 +84,13 @@ function App() {
       <MutableRef></MutableRef>
 
       <Private isLoggedIn={true} Component={Profile}></Private>
+
+      {/* <List items={["sakib", 'rakib', 'akib']} click={(item) => console.log(item)}></List> */}
+
+      {/* <List items={[1, 2, 3, 4]} click={(item) => console.log(item)}></List> */}
+
+      <List items={[{ id: 1, fname: 'mehedi', lnmae: 'hasan' }, { id: 2, fname: 'israt', lname: 'jahan' }]} click={(item) => console.log(item)}></List>
+      <RandomNumber value={10} isPositive></RandomNumber>
     </div>
   );
 }
