@@ -21,6 +21,7 @@ import Private from './components/auth/Private';
 import Profile from './components/auth/Profile';
 import List from './components/generics/List';
 import RandomNumber from './components/restriction/RandomNumber';
+import CustomButton from './components/html/Button';
 
 function App() {
   const person = {
@@ -91,6 +92,10 @@ function App() {
 
       <List items={[{ id: 1, fname: 'mehedi', lnmae: 'hasan' }, { id: 2, fname: 'israt', lname: 'jahan' }]} click={(item) => console.log(item)}></List>
       <RandomNumber value={10} isPositive></RandomNumber>
+
+      <CustomButton variant='primary'>
+        hi
+      </CustomButton>
     </div>
   );
 }
